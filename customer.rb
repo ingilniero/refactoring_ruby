@@ -16,7 +16,7 @@ class Customer
     @rentals.each do |element|
 
       # add frequent renter points
-      frequent_renter_points += frequent_renter_points(element)
+      frequent_renter_points += element.frequent_renter_points
 
       # show figures for this rental
       result += "\t" + element.movie.title + "\t" + element.charge.to_s + "\n"
@@ -26,9 +26,5 @@ class Customer
     result += "Amount owed is #{total_amount}\n"
     result += "You earned #{frequent_renter_points} frequent renter points"
     result
-  end
-
-  def frequent_renter_points(element)
-    (element.movie.price_code == Movie::NEW_RELEASE && element.days_rented > 1) ? 2 : 1
   end
 end
