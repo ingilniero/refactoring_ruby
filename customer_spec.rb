@@ -6,7 +6,6 @@ describe Customer do
   end
 
   it "has a name" do
-    puts @customer.name
     expect(@customer.name).to eq("random")
   end
 
