@@ -23,6 +23,20 @@ class Customer
     result
   end
 
+  def html_statemen
+    result = "<h1>Rentals for <em>#{ @name }</em></h1>\n"
+    @rentals.each do | element |
+      resul += "\t" + element.movie.title + ": " + element.charge.to_s + "<br />\n"
+    end
+
+    # add footer lines
+    result += "<p>You owed <em>#{ total_charge }</em><p>\n"
+    result += "On this rental you earned " +
+      "<em>#{ total_frequent_renter_points }</em>" +
+      "frequent renter points</p>"
+    result
+  end
+
   def total_charge
     @rentals.inject(0){ | sum, rental | sum + rental.charge }
   end
