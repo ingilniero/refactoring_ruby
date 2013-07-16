@@ -1,4 +1,4 @@
-require 'default_price'
+require './default_price'
 
 class RegularPrice
   include DefaultPrice

@@ -8,12 +8,12 @@ describe "Statemens results" do
     @customer2 = Customer.new "Le customer 2"
     @customer3 = Customer.new "Le customer 3"
 
-    @movie1 = Movie.new "Titanic", 0
-    @movie2 = Movie.new "Pacific Rim", 1
-    @movie3 = Movie.new "Monster Inc", 2
-    @movie4 = Movie.new "World War Z", 1
-    @movie5 = Movie.new "Aladdin",2
-    @movie6 = Movie.new "Batman the Dark Knight", 0
+    @movie1 = Movie.new "Titanic", RegularPrice.new
+    @movie2 = Movie.new "Pacific Rim", NewReleasePrice.new
+    @movie3 = Movie.new "Monster Inc", ChildrensPrice.new
+    @movie4 = Movie.new "World War Z", NewReleasePrice.new
+    @movie5 = Movie.new "Aladdin", ChildrensPrice.new
+    @movie6 = Movie.new "Batman the Dark Knight", RegularPrice.new
 
     @rental1 = Rental.new @movie2, 4
     @rental2 = Rental.new @movie5, 2
