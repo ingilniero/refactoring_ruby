@@ -1,4 +1,7 @@
+require 'default_price'
+
 class ChildrensPrice
+  include DefaultPrice
 
   def charge(days_rented)
     result = 1.5
